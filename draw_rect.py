@@ -16,7 +16,7 @@ parser.add_argument('--tracker_result_dir', type=str, help='tracker result root'
 parser.add_argument('--trackers', nargs='+')
 parser.add_argument('--format', default='pdf', type=str, help='png, pdf, jpg')
 parser.add_argument('--save_dir', default='./result', type=str, help='Save path')
-parser.add_argument('--gt_draw', dest='vis', help="store_true")
+parser.add_argument('--gt_draw', dest='gt_draw', help="store_true")
 parser.add_argument('--vis', dest='vis', action='store_true')
 args = parser.parse_args()
 
