@@ -83,7 +83,7 @@ for v_idx, video in enumerate(dataset):
             os.makedirs(Rdir)
         image_dir = os.path.join(Rdir, str(idx) + '.' + args.format)
         plt.axis('off')
-        plt.savefig(image_dir, format='args.format', bbox_inches = 'tight',pad_inches = 0)
+        plt.savefig(image_dir, format=args.format, bbox_inches = 'tight',pad_inches = 0)
         if args.vis:
             plt.ioff()
             plt.pause(0.001)
