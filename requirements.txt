@@ -1,0 +1,9 @@
+tqdm
+numpy
+glob3
+opencv-python
+colorama
+numba
+pandas
+matplotlib
+cython
