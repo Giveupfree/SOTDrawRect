@@ -58,20 +58,20 @@ python bin/draw_rect.py \
 	--dataset_dir /path/to/dataset/root \		# dataset path
 	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, OTB100, GOT10k)
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
-    --format pdf \                              # save fomat (pdf,png,jpg)
+    	--format pdf \                              # save fomat (pdf,png,jpg)
 	--trackers ours ECO UPDT SiamRPNpp \ 			# tracker names 
-    --save_dir \                                  # save dir
+    	--save_dir \                                  # save dir
 ```
 
 ### Draw a bounding box for a video sequence
 ```bash
 cd /path/to/SOTDrawRect
 python bin/draw_rect.py \    
-    -- video videoname \                 
+    	-- video videoname \                 
 	--dataset_dir /path/to/dataset/root \		# dataset path
 	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, OTB100, GOT10k)
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
-    --format pdf \                              # save fomat (pdf,png,jpg)
+    	--format pdf \                              # save fomat (pdf,png,jpg)
 	--trackers ours ECO UPDT SiamRPNpp \ 			# tracker names 
-    --save_dir \                                  # save dir
+    	--save_dir \                                  # save dir
 ```
