@@ -64,7 +64,7 @@ for v_idx, video in enumerate(dataset):
         if len(gt_bbox) == 4:
             gt_bbox = [gt_bbox[0], gt_bbox[1],gt_bbox[0], gt_bbox[1] + gt_bbox[3] - 1,
                        gt_bbox[0] + gt_bbox[2] - 1, gt_bbox[1] + gt_bbox[3] - 1, gt_bbox[0] + gt_bbox[2] - 1, gt_bbox[1]]
-        if args.GTdraw:
+        if args.gt_draw:
             cx, cy, w, h = get_axis_aligned_bbox(np.array(gt_bbox))
             x1, y1, x2, y2 = int(cx - w / 2 + 1), int(cy - h / 2 + 1), int(cx + w / 2 - 1), int(cy + h / 2 - 1)
             ax.add_patch(plt.Rectangle((x1, y1), x2 - x1 + 1, y2 - y1 + 1, color=color[0], fill=False, linewidth=3))
