@@ -19,7 +19,6 @@ git clone https://github.com/Giveupfree/SOTDrawRect.git
 pip install -r requirements.txt
 cd toolkit/utils/
 python setup.py build_ext --inplace
-# if you need to draw graph, you need latex installed on your system
 ```
 ## Update toolkit(optional)
 The contents of the entire toolkit folder can be replaced directly from [pysot-toolkit](https://github.com/StrangerZhang/pysot-toolkit)
