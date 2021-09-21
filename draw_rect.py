@@ -19,11 +19,15 @@ parser.add_argument('--save_dir', default='./result', type=str, help='Save path'
 parser.add_argument('--gt_draw', dest='gt_draw', help="store_true")
 parser.add_argument('--vis', dest='vis', action='store_true')
 args = parser.parse_args()
-
+# OTB100
+# CarDark
 color = ["yellow", "red", "lime", "blue", "black", "cyan", "pink", "purple", "orange", "turquoise", "slategray"]
 if not os.path.exists(args.save_dir):
     os.makedirs(args.save_dir)
-dataset_root = os.path.join(args.dataset_dir, args.dataset)
+if 'GOT' in args.dataset:
+    dataset_root = os.path.join(args.dataset_dir, 'args.dataset', "test")
+else:
+    dataset_root = os.path.join(args.dataset_dir, args.dataset)
 dataset = DatasetFactory.create_dataset(name=args.dataset, dataset_root=dataset_root, load_img=False)
 
 for v_idx, video in enumerate(dataset):
@@ -82,6 +86,7 @@ for v_idx, video in enumerate(dataset):
         if os.path.exists(Rdir) is False:
             os.makedirs(Rdir)
         image_dir = os.path.join(Rdir, str(idx) + '.' + args.format)
+        plt.text(40,80, "#{:06d}".format(idx),fontdict={'color': 'yellow','size': 20})
         plt.axis('off')
         plt.savefig(image_dir, format=args.format, bbox_inches = 'tight',pad_inches = 0)
         if args.vis:
