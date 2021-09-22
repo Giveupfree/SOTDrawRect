@@ -25,7 +25,7 @@ color = ["yellow", "red", "lime", "blue", "black", "cyan", "pink", "purple", "or
 if not os.path.exists(args.save_dir):
     os.makedirs(args.save_dir)
 if 'GOT' in args.dataset:
-    dataset_root = os.path.join(args.dataset_dir, 'args.dataset', "test")
+    dataset_root = os.path.join(args.dataset_dir, args.dataset, "test")
 else:
     dataset_root = os.path.join(args.dataset_dir, args.dataset)
 dataset = DatasetFactory.create_dataset(name=args.dataset, dataset_root=dataset_root, load_img=False)
