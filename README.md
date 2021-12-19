@@ -53,7 +53,7 @@ Download json files used in our toolkit [baidu pan](https://pan.baidu.com/s/1js0
 ### Draw rectangular boxes
 ```bash
 cd /path/to/SOTDrawRect
-python bin/draw_rect.py \                     
+python draw_rect.py \                     
 	--dataset_dir /path/to/dataset/root \		# dataset path
 	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, OTB100, GOT10k)
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
