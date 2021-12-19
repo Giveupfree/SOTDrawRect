@@ -65,7 +65,7 @@ python draw_rect.py \
 ### Draw a bounding box for a video sequence
 ```bash
 cd /path/to/SOTDrawRect
-python bin/draw_rect.py \    
+python draw_rect.py \    
     	-- video videoname \                 
 	--dataset_dir /path/to/dataset/root \		# dataset path
 	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, OTB100, GOT10k)
