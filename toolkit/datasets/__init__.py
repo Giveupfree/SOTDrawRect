@@ -28,7 +28,7 @@ class DatasetFactory(object):
             dataset = UAVDataset(**kwargs)
         elif 'NFS' in name:
             dataset = NFSDataset(**kwargs)
-        elif 'VOT2018' == name or 'VOT2016' == name:
+        elif 'VOT2018' == name or 'VOT2016' == name or 'VOT2019' == name:
             dataset = VOTDataset(**kwargs)
         elif 'VOT2018-LT' == name:
             dataset = VOTLTDataset(**kwargs)
