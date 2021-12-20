@@ -7,16 +7,15 @@ import numpy as np
 import argparse
 import pandas as pd
 import matplotlib.pyplot as plt
-
 parser = argparse.ArgumentParser(description='Draw rectangular boxes for Single Object Tracking')
 parser.add_argument('--video', default='', type=str, help='eval one special video')
-parser.add_argument('--dataset_dir', type=str, help='dataset root directory')
+parser.add_argument('--dataset_dir', type=str, default='', help='dataset root directory')
 parser.add_argument('--dataset', type=str, help='dataset name')
 parser.add_argument('--tracker_result_dir', type=str, help='tracker result root')
 parser.add_argument('--trackers', nargs='+')
 parser.add_argument('--format', default='pdf', type=str, help='png, pdf, jpg')
-parser.add_argument('--save_dir', default='./result', type=str, help='Save path')
-parser.add_argument('--gt_draw', dest='gt_draw', help="store_true")
+parser.add_argument('--save_dir', default='./results', type=str, help='Save path')
+parser.add_argument('--gt_draw', dest='gt_draw', action="store_true")
 parser.add_argument('--vis', dest='vis', action='store_true')
 args = parser.parse_args()
 # OTB100
@@ -46,6 +45,13 @@ for v_idx, video in enumerate(dataset):
                 names.append(P.split('/')[-1])
             except:
                 exit()
+        elif "VOT" in args.dataset:
+            try:
+                bboxes.append(pd.read_csv(os.path.join(args.tracker_result_dir, P, 'baseline', str(video.name), str(video.name) + "_001.txt"), sep='\t|,| ',
+                                          header=None, names=['xmin', 'ymin', 'width', 'height'], engine='python'))
+                names.append(P.split('/')[-1])
+            except:
+                exit()
         else:
             try:
                 bboxes.append(pd.read_csv(os.path.join(args.tracker_result_dir, P, str(video.name) + ".txt"), sep='\t|,| ',
@@ -68,10 +74,14 @@ for v_idx, video in enumerate(dataset):
         if len(gt_bbox) == 4:
             gt_bbox = [gt_bbox[0], gt_bbox[1],gt_bbox[0], gt_bbox[1] + gt_bbox[3] - 1,
                        gt_bbox[0] + gt_bbox[2] - 1, gt_bbox[1] + gt_bbox[3] - 1, gt_bbox[0] + gt_bbox[2] - 1, gt_bbox[1]]
+
         if args.gt_draw:
-            cx, cy, w, h = get_axis_aligned_bbox(np.array(gt_bbox))
-            x1, y1, x2, y2 = int(cx - w / 2 + 1), int(cy - h / 2 + 1), int(cx + w / 2 - 1), int(cy + h / 2 - 1)
-            ax.add_patch(plt.Rectangle((x1, y1), x2 - x1 + 1, y2 - y1 + 1, color=color[0], fill=False, linewidth=3))
+            if "VOT" in args.dataset:
+                ax.add_patch(plt.Polygon(np.array(gt_bbox).reshape(-1,2), color=color[0], fill=False, linewidth=3))
+            else:
+                cx, cy, w, h = get_axis_aligned_bbox(np.array(gt_bbox))
+                x1, y1, x2, y2 = int(cx - w / 2 + 1), int(cy - h / 2 + 1), int(cx + w / 2 - 1), int(cy + h / 2 - 1)
+                ax.add_patch(plt.Rectangle((x1, y1), x2 - x1 + 1, y2 - y1 + 1, color=color[0], fill=False, linewidth=3))
         for (n, bbox) in enumerate(bboxes):
             try:
                 bbox = list(map(int, bbox.iloc[idx].values))
@@ -86,7 +96,7 @@ for v_idx, video in enumerate(dataset):
         if os.path.exists(Rdir) is False:
             os.makedirs(Rdir)
         image_dir = os.path.join(Rdir, str(idx) + '.' + args.format)
-        plt.text(40,80, "#{:06d}".format(idx),fontdict={'color': 'yellow','size': 20})
+        plt.text(40,80, "#{:06d}".format(idx), fontdict={'color': 'yellow','size': 20})
         plt.axis('off')
         plt.savefig(image_dir, format=args.format, bbox_inches = 'tight',pad_inches = 0)
         if args.vis:
