@@ -40,8 +40,15 @@ class LaSOTVideo(Video):
             traj_file = os.path.join(path, name, self.name+'.txt')
             if os.path.exists(traj_file):
                 with open(traj_file, 'r') as f :
-                    pred_traj = [list(map(float, x.strip().split(',')))
-                            for x in f.readlines()]
+                    c = f.readlines()
+                    try:
+                        pred_traj = [list(map(float, x.strip().split(',')[0].split('\t') if '\t' in x.strip().split(',')[
+                            0] else x.strip().split(',')))
+                                     for x in c]
+                    except:
+                        pred_traj = [list(map(float, x.strip().split(' ')[0].split('\t') if '\t' in x.strip().split(' ')[
+                            0] else x.strip().split(' ')))
+                                     for x in c]
             else:
                 print("File not exists: ", traj_file)
             if self.name == 'monkey-17':
