@@ -57,9 +57,9 @@ python draw_rect.py \
 	--dataset_dir /path/to/dataset/root \		# dataset path
 	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, OTB100, GOT10k, LaSOT)
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
-    	--format pdf \                              # save fomat (pdf,png,jpg)
-	--trackers ours ECO UPDT SiamRPNpp \ 			# tracker names 
-    	--save_dir \                                  # save dir
+    	--format pdf \                                  # save fomat (pdf,png,jpg)
+	--trackers ours ECO UPDT SiamRPNpp \ 		# tracker names 
+    	--save_dir /path/to/save\                       # save dir
 ```
 
 ### Draw a bounding box for a video sequence
@@ -70,7 +70,7 @@ python draw_rect.py \
 	--dataset_dir /path/to/dataset/root \		# dataset path
 	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, OTB100, GOT10k, LaSOT)
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
-    	--format pdf \                              # save fomat (pdf,png,jpg)
-	--trackers ours ECO UPDT SiamRPNpp \ 			# tracker names 
-    	--save_dir \                                  # save dir
+    	--format pdf \                                  # save fomat (pdf,png,jpg)
+	--trackers ours ECO UPDT SiamRPNpp \ 	        # tracker names 
+    	--save_dir /path/to/save\                       # save dir
 ```
