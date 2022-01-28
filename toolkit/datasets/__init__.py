@@ -22,7 +22,7 @@ class DatasetFactory(object):
         name = kwargs['name']
         if 'OTB' in name:
             dataset = OTBDataset(**kwargs)
-        elif 'LaSOT' == name:
+        elif 'LaSOT' in name:
             dataset = LaSOTDataset(**kwargs)
         elif 'UAV' in name:
             dataset = UAVDataset(**kwargs)
