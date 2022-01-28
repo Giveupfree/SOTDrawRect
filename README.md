@@ -1,9 +1,9 @@
 # SOTDrawRect
 The purpose of this repo is to provide evaluation API of Current Single Object Tracking Dataset, including
-
 - [x] [VOT2016](http://www.votchallenge.net/vot2016/dataset.html)
 - [x] [VOT2018](http://www.votchallenge.net/vot2018/dataset.html)
 - [x] [VOT2018-LT](http://www.votchallenge.net/vot2018/dataset.html)
+- [x] [VOT2019](http://www.votchallenge.net/vot2019/dataset.html)
 - [x] [OTB100(OTB2015)](http://cvlab.hanyang.ac.kr/tracker_benchmark/datasets.html)
 - [x] [UAV123](https://ivul.kaust.edu.sa/Pages/Dataset-UAV123.aspx)
 - [x] [NFS](http://ci2cv.net/nfs/index.html)
@@ -62,7 +62,7 @@ python draw_rect.py \
     	--save_dir /path/to/save\                       # save dir
 ```
 
-### Draw a bounding box for a video sequence
+### Draw bounding boxes for a video sequence
 ```bash
 cd /path/to/SOTDrawRect
 python draw_rect.py \    
