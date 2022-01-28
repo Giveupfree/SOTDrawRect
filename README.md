@@ -55,7 +55,7 @@ Download json files used in our toolkit [baidu pan](https://pan.baidu.com/s/1js0
 cd /path/to/SOTDrawRect
 python draw_rect.py \                     
 	--dataset_dir /path/to/dataset/root \		# dataset path
-	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, OTB100, GOT10k, LaSOT, UAV123)
+	--dataset VOT2018 \				# dataset name(VOT2019, VOT2018, VOT2016, OTB100, GOT10k, LaSOT, UAV123)
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
     	--format pdf \                                  # save fomat (pdf,png,jpg)
 	--trackers ours ECO UPDT SiamRPNpp \ 		# tracker names 
@@ -68,7 +68,7 @@ cd /path/to/SOTDrawRect
 python draw_rect.py \    
     	-- video videoname \                 
 	--dataset_dir /path/to/dataset/root \		# dataset path
-	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, OTB100, GOT10k, LaSOT, UAV123)
+	--dataset VOT2018 \				# dataset name(VOT2019, VOT2018, VOT2016, OTB100, GOT10k, LaSOT, UAV123)
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
     	--format pdf \                                  # save fomat (pdf,png,jpg)
 	--trackers ours ECO UPDT SiamRPNpp \ 	        # tracker names 
