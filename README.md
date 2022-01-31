@@ -76,5 +76,4 @@ python draw_rect.py \
 ```
 ### Update 2022.1.31
 1.Add LaSOText.json file.
-
 2.Update the VOT2019.json tags list and corresponding values, and modify its the picture path list.
