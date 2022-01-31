@@ -75,6 +75,6 @@ python draw_rect.py \
     	--save_dir /path/to/save\                       # save dir
 ```
 ### Update 2022.1.31
-1.Add JSON file required for lasotext evaluation.
+1.Add JSON file required for LaSOText evaluation.
 
 2.Update the VOT2019.json tags list and corresponding values, and modify its the picture path list.
