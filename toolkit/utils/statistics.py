@@ -55,7 +55,7 @@ def calculate_accuracy(pred_trajectory, gt_trajectory,
 
     acc = 0
     if len(overlaps) > 0:
-        acc = np.nanmean(overlaps)
+        acc = np.NaN if np.isnan(overlaps).all() else np.nanmean(overlaps)
     return acc, overlaps
 
 
