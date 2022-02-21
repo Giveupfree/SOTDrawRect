@@ -79,3 +79,5 @@ python draw_rect.py \
 1.Add JSON file required for LaSOText evaluation.
 
 2.Update the VOT2019.json tags list and corresponding values, and modify its the picture path list.
+
+3.Fix the "RuntimeWarning: Mean of empty slice   acc = np.nanmean(overlaps)" warning when [pysot-toolkit](https://github.com/StrangerZhang/pysot-toolkit) runs eval.py to verify the VOT2019 Benchmark
