@@ -22,7 +22,7 @@ cd toolkit/utils/
 python setup.py build_ext --inplace
 ```
 ## Update toolkit(optional)
-The contents of the entire toolkit folder can be replaced directly from [pysot-toolkit](https://github.com/StrangerZhang/pysot-toolkit)
+The entire toolkit folder is from [pysot-toolkit](https://github.com/StrangerZhang/pysot-toolkit), but here's a fix for some of its problems
 
 
 ## Download Dataset
