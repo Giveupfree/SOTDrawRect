@@ -73,8 +73,8 @@ class AccuracyRobustnessBenchmark:
             accuracy = np.nanmean(overlaps)
             length = sum([len(x) for x in ret['overlaps'].values()])
             failures = list(ret['failures'].values())
-            lost_number = np.mean(np.sum(failures, axis=0))
-            robustness = np.mean(np.sum(np.array(failures), axis=0))/ length * 100
+            lost_number = np.mean(np.sum(np.array(failures, dtype=object), axis=0))
+            robustness = np.mean(np.sum(np.array(failures, dtype=object), axis=0)) / length * 100
             if eao_result is None:
                 print(formatter.format(tracker_name, accuracy, robustness, lost_number))
             else:
