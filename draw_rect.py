@@ -96,7 +96,8 @@ for v_idx, video in enumerate(dataset):
         if os.path.exists(Rdir) is False:
             os.makedirs(Rdir)
         image_dir = os.path.join(Rdir, str(idx) + '.' + args.format)
-        plt.text(40,80, "#{:06d}".format(idx), fontdict={'color': 'yellow','size': 20})
+        h, w, d = img.shape
+        plt.text(20/500*w, 30/280*h, "#{:06d}".format(idx), fontdict={'color': 'yellow', 'size': math.ceil(15/math.sqrt(500*280)*math.sqrt(w*h))})
         plt.axis('off')
         plt.savefig(image_dir, format=args.format, bbox_inches = 'tight',pad_inches = 0)
         if args.vis:
