@@ -82,3 +82,6 @@ python draw_rect.py \
 
 ### Update 2022.2.21
 1.Fix the "RuntimeWarning: Mean of empty slice   acc = np.nanmean(overlaps)" warning when [pysot-toolkit](https://github.com/StrangerZhang/pysot-toolkit) runs eval.py to verify the VOT2019 Benchmark
+
+### warning 2022.3.16
+1.LaSOText.json中视频序列和注释长度不对应问题：实验发现，在paddle序列中出现视频长度和注释数目(官方提供的数据集和注释)和LaSOT官方提供的工具箱中，与其工具箱所提供的其它跟踪器的结果所对应的视频长度不一致，其中包括数据集的视频序列长度和注释少于跟踪器结果的长度，也出现多于踪器结果的情况。已知这是LaSOT官方的问题，因此慎用LaSOText.json文件做测试，等待LaSOT官方修复，这里也将及时对LaSOText.json文件做出更新。
