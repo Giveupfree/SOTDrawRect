@@ -53,6 +53,8 @@ class LaSOTVideo(Video):
                 print("File not exists: ", traj_file)
             if self.name == 'monkey-17':
                 pred_traj = pred_traj[:len(self.gt_traj)]
+            elif "paddle" in self.name:
+                pred_traj = pred_traj[:len(self.gt_traj)]
             if store:
                 self.pred_trajs[name] = pred_traj
             else:
