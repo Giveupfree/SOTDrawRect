@@ -27,7 +27,7 @@ def draw_eao(result):
         value = np.array(value)
         value *= (1 / max_value)
         plt.plot(angles, value, linestyle='-', color=COLOR[i], marker=MARKER_STYLE[i],
-                label=tracker_name.replace("_", r"\underline{ }"), linewidth=1.5, markersize=6)
+                label=tracker_name.replace("_", r"\underline{ } "), linewidth=1.5, markersize=6)
 
     attrs = ["Overall", "Camera motion",
              "Illumination change","Motion Change",
