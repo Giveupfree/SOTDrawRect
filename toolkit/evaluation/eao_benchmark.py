@@ -11,7 +11,7 @@ class EAOBenchmark:
     Args:
         dataset:
     """
-    def __init__(self, dataset, skipping=5, tags=['all']):
+    def __init__(self, dataset, skipping=5, tags=['all', 'camera_motion', 'illum_change', 'motion_change', 'size_change', 'occlusion', 'empty']):
         self.dataset = dataset
         self.skipping = skipping
         self.tags = tags
