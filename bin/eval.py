@@ -17,16 +17,6 @@ import matplotlib.pyplot as plt
 plt.rc("text", usetex=True)
 plt.rc("font", family="serif")
 plt.rc("font", size=10)
-# --dataset_dir F:/datasets/VOT2019 --tracker_result_dir D:/资料/result/Banchmark/VOT2019 --dataset VOT2019 --trackers Ours SiamRPN++ ATOM SiamMask SA_SIAM_R SPM ARTCS SiamDW_ST DCFST
-# -p ./results -d VOT2016 -r E:/datasets -n 1 --tracker_prefix CARAlle12 -s --vis
-# --dataset_dir E:/datasets/OTB100 --dataset OTB100 --tracker_result_dir D:/资料/Project/SiamPD(train)/tune_results/OTB100/checkpoint_e17 --trackers 0.670checkpoint_e17_wi-0.588_pk-0.414_lr-0.527 0.670checkpoint_e17_wi-0.578_pk-0.456_lr-0.504 0.670checkpoint_e17_wi-0.472_pk-0.561_lr-0.519 --show_video_level
-# --dataset_dir ../../../dataset/OTB100 --dataset OTB100 --tracker_result_dir D:/资料/Project/SiamPD(train)/results/OTB100/ --trackers SiamCAR Allocean0.35_0.2_0.45e11-0.686 Allocean0.35_0.2_0.45e12-0.682 Allocean0.35_0.2_0.45e13-0.681 Allocean0.35_0.2_0.45e14-0.691-P2 Allocean0.35_0.2_0.45e15-0.691-P3 Allocean0.35_0.2_0.45e16-0.691-P1 Allocean0.35_0.2_0.45e17 --show_video_level
-# --dataset_dir E:/datasets/VOT2018 --dataset VOT2018 --tracker_result_dir D:/资料/Project/SiamPD(train)/results/VOT2018/ --trackers Allocean0.44_0.04_0.33e14-0.335 Allocean0.44_0.04_0.33e18 --show_video_level
-# --dataset_dir E:/datasets/VOT2018 --dataset VOT2018 --tracker_result_dir D:/资料/Project/SiamPD(train)/results/VOT2018/ --trackers Allocean0.44_0.04_0.33e14-0.372 Allocean0.44_0.04_0.33 --show_video_level
-# OTB100 ours SiamRPN++ SiamCAR DiMP50 Ocean-online Ocean-offline DaSiamRPN SiamBAN GCT ECO-HC
-# --dataset_dir F:/datasets/OTB100 --tracker_result_dir D:/Tracker/TrFTB2022/results/OTB100 --dataset OTB100 --trackers GATAll2e11 GATAll2e12 GATAll2e13 GATAll2e14 GATAll2e15 GATAll2e16 GATAll2e17 GATAll2e18 GATAll2e19 GATAll2e20 GATAll2e21 GATAll2e22 GATAll2e23 GATAll2e24 GATAll2e25 GATAll2e26 GATAll2e27 GATAll2e28
-# --dataset_dir F:/datasets/LaSOT --tracker_result_dir D:/资料/result/Banchmark/LaSOT --dataset LaSOT --trackers Ours(Transformer) Ours(DW-Corr) SiamCAR SiamBAN Ocean-offline GlobalTrack SiamRPN++ CLNet DaSiamRPN C-RPN --vis
-# --dataset_dir F:/datasets/LaSOT --tracker_result_dir D:/Tracker/TrFTB2022/results/LaSOT --dataset LaSOT --trackers LaSOTmodel1e11 LaSOTmodel1e12 LaSOTmodel1e13 LaSOTmodel1e14 LaSOTmodel1e15
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Single Object Tracking Evaluation')
     parser.add_argument('--dataset_dir', type=str, help='dataset root directory')
@@ -171,7 +161,7 @@ if __name__ == '__main__':
         benchmark.show_result(eao_result)
         ar_benchmark.show_result(ar_result, eao_result,
                 show_video_level=args.show_video_level)
-        # draw_eao(eao_result)
+        draw_eao(eao_result)
     elif 'VOT2018-LT' == args.dataset:
         dataset = VOTLTDataset(args.dataset, root)
         dataset.set_tracker(tracker_dir, trackers)
