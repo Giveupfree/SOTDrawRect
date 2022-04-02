@@ -97,3 +97,6 @@ python draw_rect.py \
 1.新增VOT系列各个属性的雷达图绘代码
 
 2.修复原有VOT系列各个属性的雷达图绘制中不能绘制下滑线的问题
+
+### Update 2022.4.02
+1.新增LaSOText2.json，其中LaSOText2.json中paddle-1中的数据长度和官方数据集所提供的长度保持一致。如果想利用官方提供的跟踪器结果文件绘制曲线，建议使用LaSOText.json。LaSOText2.json则是为了方便用户和近期的相关论文中提供的结果进行比较。
