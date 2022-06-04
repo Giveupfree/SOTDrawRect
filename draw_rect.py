@@ -44,6 +44,8 @@ for v_idx, video in enumerate(dataset):
                                           header=None, names=['xmin', 'ymin', 'width', 'height'], engine='python'))
                 names.append(P.split('/')[-1])
             except:
+                print("Please check path")
+                print(" GOT result file :{}".format(os.path.join(args.tracker_result_dir, P, str(video.name), str(video.name) + "_001.txt")))
                 exit()
         elif "VOT" in args.dataset:
             try:
@@ -51,6 +53,8 @@ for v_idx, video in enumerate(dataset):
                                           header=None, names=['xmin', 'ymin', 'width', 'height'], engine='python'))
                 names.append(P.split('/')[-1])
             except:
+                print("Please check path")
+                print(" GOT result file :{}".format(os.path.join(args.tracker_result_dir, P, 'baseline', str(video.name), str(video.name) + "_001.txt")))
                 exit()
         else:
             try:
@@ -65,6 +69,8 @@ for v_idx, video in enumerate(dataset):
                                         sep='\t|,| ', header=None, names=['xmin', 'ymin', 'width', 'height'], engine='python'))
                     names.append(P.split('/')[-1])
                 except:
+                    print("Please check path")
+                    print("path1:{} or path2:{}".format(os.path.join(args.tracker_result_dir, P, str(video.name) + ".txt"),os.path.join(args.tracker_result_dir, P, str(video.name)[:-2] + "_" + str(video.name)[-1] + ".txt")))
                     exit()
 
     for idx, (img, gt_bbox) in enumerate(video):
