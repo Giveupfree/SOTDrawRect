@@ -19,7 +19,7 @@ class Video(object):
         self.imgs = None
 
         if load_img:
-            self.imgs = [cv2.imread(img)
+            self.imgs = [cv2.imread(x)
                             for x in self.img_names]
             self.width = self.imgs[0].shape[1]
             self.height = self.imgs[0].shape[0]
