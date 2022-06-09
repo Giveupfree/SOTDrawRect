@@ -104,4 +104,6 @@ python draw_rect.py \
 ### Update 2022.06.09
 1.根据Mixformer Tracker作者所提供的GOT10k结果所生成的GOT10k测试集的json文件“GOT-10k-test.json”，方便用户进行搜参操作。(搜参或测试时，记得将GOT-10k-test.json重命名为GOT-10k.json)。
 
+2.新增“creat_got_json.py”文件，用于生成GOT-10k.json，其中raw results可从上got官网(http://got-10k.aitestunion.com/leaderboard)下载。
+
 感谢某位不知名的大佬的支持。
