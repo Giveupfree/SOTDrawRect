@@ -67,11 +67,12 @@ def LaSOT_Json(path, annos, name):
 
 if __name__ == '__main__' :
 	parser = argparse.ArgumentParser(description='creat json for got test tuning')
-	parser.add_argument('--annos', type=str,default='./',
-						help='The annos path in the toolkit officially provided by LaSOT(LaSOT_Evaluation_Toolkit)/LaSOText(LaSOT_Evaluation_Toolkit_V2)')
+	parser.add_argument('--dataset_path', type=str,default='./',
+						help='The path is the LaSOT or LaSOT dataset path')
+	parser.add_argument('--annos', type=str,default='./',help='The annos path in the toolkit officially provided by LaSOT(LaSOT_Evaluation_Toolkit)/LaSOText(LaSOT_Evaluation_Toolkit_V2)')
 	parser.add_argument('--name', type=str, default='LaSOText',help='LaSOT or LaSOText')
 	# http://vision.cs.stonybrook.edu/~lasot/results.html
 	# LaSOT_Evaluation_Toolkit : https://github.com/HengLan/LaSOT_Evaluation_Toolkit
 	# LaSOT_Evaluation_Toolkit_V2: http://vision.cs.stonybrook.edu/~lasot/toolkit/LaSOT_Evaluation_Toolkit_V2.zip
 	args = parser.parse_args()
-   	LaSOT_Json(path, args.annos, args.name)
+   	LaSOT_Json(args.dataset_path, args.annos, args.name)
