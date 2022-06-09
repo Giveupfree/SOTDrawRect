@@ -70,8 +70,8 @@ if __name__ == '__main__' :
 	parser.add_argument('--dataset_path', type=str,default='./',
 						help='The path is the LaSOT or LaSOT dataset path')
 	parser.add_argument('--annos', type=str,default='./',help='The annos path in the toolkit officially provided by LaSOT(LaSOT_Evaluation_Toolkit)/LaSOText(LaSOT_Evaluation_Toolkit_V2)')
-	# ²Î¼û£ºhttp://vision.cs.stonybrook.edu/~lasot/results.html
+	# Â²ÃŽÂ¼Ã»Â£Âºhttp://vision.cs.stonybrook.edu/~lasot/results.html
 	# LaSOT_Evaluation_Toolkit : https://github.com/HengLan/LaSOT_Evaluation_Toolkit
 	# LaSOT_Evaluation_Toolkit_V2: http://vision.cs.stonybrook.edu/~lasot/toolkit/LaSOT_Evaluation_Toolkit_V2.zip
 	args = parser.parse_args()
-    LaSOT_Json(path, args.annos, args.dataset_path)
+   	LaSOT_Json(path, args.annos, args.dataset_path)
