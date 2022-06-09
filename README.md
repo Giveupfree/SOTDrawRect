@@ -102,7 +102,7 @@ python draw_rect.py \
 1.新增LaSOText2.json，其中LaSOText2.json中paddle-1中的数据长度和官方数据集所提供的长度保持一致。如果想利用官方提供的跟踪器结果文件绘制曲线，建议使用LaSOText.json。LaSOText2.json则是为了方便用户和近期的相关论文中提供的结果进行比较。
 
 ### Update 2022.06.09
-1.根据Mixformer Tracker作者所提供的GOT10k结果所生成的GOT10k测试集的json文件“GOT-10k-test.json”，方便用户进行搜参操作。(搜参或测试时，记得将GOT-10k-test.json重命名为GOT-10k.json)。
+1.根据OSTrack Tracker作者所提供的GOT10k结果所生成的GOT10k测试集的json文件“GOT-10k-test.json”，方便用户进行搜参操作。(搜参或测试时，记得将GOT-10k-test.json重命名为GOT-10k.json)。
 
 2.新增“creat_got_json.py”文件，用于生成GOT-10k.json，其中raw results可从上got官网下载(http://got-10k.aitestunion.com/leaderboard) 。
 
