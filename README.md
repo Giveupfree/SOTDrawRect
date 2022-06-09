@@ -106,4 +106,6 @@ python draw_rect.py \
 
 2.新增“creat_got_json.py”文件，用于生成GOT-10k.json，其中raw results可从上got官网下载(http://got-10k.aitestunion.com/leaderboard) 。
 
+3.新增"LaSOT.json/LaSOText.json" 文件生成方式
+
 感谢某位不知名的大佬的支持。
