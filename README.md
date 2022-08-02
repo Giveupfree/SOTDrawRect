@@ -96,7 +96,7 @@ python bin/eval.py \
 ------------------------------------------------------------
 ```
 
-### Evaluation on OTB100(UAV123, NFS, LaSOT, LaSOText, GOT10k, TrackingNet)
+### Evaluation on OTB100(UAV123, NFS, LaSOT, LaSOText)
 
 converted *.txt tracking results will be released soon
 
@@ -104,7 +104,7 @@ converted *.txt tracking results will be released soon
 cd /path/to/pysot-toolkit
 python bin/eval.py \
 	--dataset_dir /path/to/dataset/root \		# dataset path
-	--dataset OTB100 \				# dataset name(OTB100, UAV123, NFS, LaSOT, LaSOText, GOT10k, TrackingNet)
+	--dataset OTB100 \				# dataset name(OTB100, UAV123, NFS, LaSOT, LaSOText)
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
 	--trackers SiamRPN++ C-COT DaSiamRPN ECO  \	# tracker names 
 	--num 4 \				  	# evaluation thread
@@ -165,8 +165,6 @@ python bin/eval.py \
 |   SiamFC   |   0.600   | 0.334  | 0.429 |
 -------------------------------------------
 ```
-
-
 
 ### Update 2022.1.31
 1.Add JSON file required for LaSOText evaluation.
