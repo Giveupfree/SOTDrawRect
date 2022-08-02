@@ -96,7 +96,7 @@ python bin/eval.py \
 ------------------------------------------------------------
 ```
 
-##Evaluation on OTB100(UAV123, NFS, LaSOT, LaSOText, GOT10k)
+### Evaluation on OTB100(UAV123, NFS, LaSOT, LaSOText, GOT10k, TrackingNet)
 
 converted *.txt tracking results will be released soon
 
@@ -104,7 +104,7 @@ converted *.txt tracking results will be released soon
 cd /path/to/pysot-toolkit
 python bin/eval.py \
 	--dataset_dir /path/to/dataset/root \		# dataset path
-	--dataset OTB100 \				# dataset name(OTB100, UAV123, NFS, LaSOT)
+	--dataset OTB100 \				# dataset name(OTB100, UAV123, NFS, LaSOT, LaSOText, GOT10k, TrackingNet)
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
 	--trackers SiamRPN++ C-COT DaSiamRPN ECO  \	# tracker names 
 	--num 4 \				  	# evaluation thread
@@ -141,7 +141,7 @@ python bin/eval.py \
 -----------------------------------------------------------------------------------------
 ```
 
-##Evaluation on VOT2018-LT
+### Evaluation on VOT2018-LT
 ```bash
 cd /path/to/pysot-toolkit
 python bin/eval.py \
