@@ -75,15 +75,16 @@ python draw_rect.py \
 	--trackers ours ECO UPDT SiamRPNpp \ 	        # tracker names 
     	--save_dir /path/to/save\                       # save dir
 ```
-### Evaluation on VOT2018(VOT2016, VOT2019)
 
+### Evaluation on VOT2018(VOT2016, VOT2019)
 ```bash
 cd /path/to/pysot-toolkit
 python bin/eval.py \
 	--dataset_dir /path/to/dataset/root \		# dataset path
-	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016)
+	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, VOT2019)
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
 	--trackers ECO UPDT SiamRPNpp 			# tracker names 
+	--vis
 
 # you will see
 ------------------------------------------------------------
