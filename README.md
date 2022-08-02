@@ -60,7 +60,7 @@ python draw_rect.py \
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
     	--format pdf \                                  # save fomat (pdf,png,jpg)
 	--trackers ours ECO UPDT SiamRPNpp \ 		# tracker names 
-    	--save_dir /path/to/save\                       # save dir
+    	--save_dir /path/to/save                        # save dir
 ```
 
 ### Draw bounding boxes for a video sequence
@@ -73,7 +73,7 @@ python draw_rect.py \
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
     	--format pdf \                                  # save fomat (pdf,png,jpg)
 	--trackers ours ECO UPDT SiamRPNpp \ 	        # tracker names 
-    	--save_dir /path/to/save\                       # save dir
+    	--save_dir /path/to/save                        # save dir
 ```
 
 ### Evaluation on VOT2018(VOT2016, VOT2019)
@@ -84,7 +84,7 @@ python bin/eval.py \
 	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, VOT2019)
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
 	--trackers ECO UPDT SiamRPNpp 			# tracker names 
-	--vis
+	--vis                                           # draw graph
 
 # you will see
 ------------------------------------------------------------
