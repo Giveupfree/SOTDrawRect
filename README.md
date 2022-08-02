@@ -150,7 +150,7 @@ python bin/eval.py \
 	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
 	--trackers SiamRPN++ MBMD DaSiam-LT \		# tracker names 
 	--num 4 \				  	# evaluation thread
-	--vis \					  	# wether to draw graph
+	--vis  					  	# wether to draw graph
 
 # you will see
 -------------------------------------------
