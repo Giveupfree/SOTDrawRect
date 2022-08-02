@@ -108,7 +108,7 @@ def main():
         print("{:s} total lost: {:d}".format(model_name, total_lost))
     else:
         with Pool(processes=args.thread) as p:
-            for _ in tqdm(p.imap_unordered(vot_test, zip(ind, paras, trackers)), desc='testing',
+            for _ in tqdm(p.imap_unordered(ope_test, zip(ind, paras, trackers)), desc='testing',
                                  total=len(dataset),
                                  ncols=100):
                 ...
