@@ -206,5 +206,5 @@ python bin/eval.py \
 具体使用方法见文件内注释。
 
 ### Update 2022.09.24
-1.更新GOT-10k.json，结果来自MixViT
+1.更新GOT-10k-test.json，结果来自MixViT
 
