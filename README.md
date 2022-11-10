@@ -21,6 +21,14 @@ pip install -r requirements.txt
 cd toolkit/utils/
 python setup.py build_ext --inplace
 ```
+
+If you already have a json file, you only need to download the version of the code.
+```bash
+git clone -b nojson https://github.com/Giveupfree/SOTDrawRect.git
+pip install -r requirements.txt
+cd toolkit/utils/
+python setup.py build_ext --inplace
+```
 ## Update toolkit(optional)
 The entire toolkit folder is from [pysot-toolkit](https://github.com/StrangerZhang/pysot-toolkit), but here's a fix for some of its problems
 
