@@ -15,8 +15,17 @@ The purpose of this repo is to provide evaluation API of Current Single Object T
 ## Install 
 
 
+You need to download versions of all json files at the same time
 ```bash
 git clone https://github.com/Giveupfree/SOTDrawRect.git
+pip install -r requirements.txt
+cd toolkit/utils/
+python setup.py build_ext --inplace
+```
+
+If you already have a json file, you only need to download the version of the code.
+```bash
+git clone -b nojson https://github.com/Giveupfree/SOTDrawRect.git
 pip install -r requirements.txt
 cd toolkit/utils/
 python setup.py build_ext --inplace
