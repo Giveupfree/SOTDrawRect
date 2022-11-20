@@ -42,7 +42,16 @@ class Video(object):
             tracker_names = [tracker_names]
         for name in tracker_names:
             traj_file = os.path.join(path, name, self.name+'.txt')
+            traj_file1 = os.path.join(path, name, self.name, self.name + '_001.txt')
+            flag = False
             if os.path.exists(traj_file):
+                traj_file = traj_file
+                flag = True
+            elif os.path.exists(traj_file1):
+                traj_file = traj_file1
+                flag = True
+            
+            if flag:
                 with open(traj_file, 'r') as f :
                     c = f.readlines()
                     try:
