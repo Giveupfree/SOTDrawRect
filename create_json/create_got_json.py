@@ -27,7 +27,7 @@ for i,j in zip(video_abs,videos):
 for v,t in zip(videos,traj_list):
     meta[v]={}
     meta[v]['gt_rect']=t
-    meta[v]['img_names']=[os.path.join(v,'{:0>8d}.jpg'.format(i)) for i in range(1,len(t)+1)]
+    meta[v]['img_names']=[v+'/'+'{:0>8d}.jpg'.format(i) for i in range(1,len(t)+1)]
     meta[v]['init_rect']=t[0]
     meta[v]['video_dir']=v
 
