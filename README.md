@@ -176,15 +176,11 @@ python bin/eval.py \
 ```
 
 ### Update 2022.1.31
-1.Add JSON file required for LaSOText evaluation.
-
-2.Update the VOT2019.json tags list and corresponding values, and modify its the picture path list.
+1..Update the VOT2019.json tags list and corresponding values, and modify its the picture path list.
 
 ### Update 2022.2.21
 1.Fix the "RuntimeWarning: Mean of empty slice   acc = np.nanmean(overlaps)" warning when [pysot-toolkit](https://github.com/StrangerZhang/pysot-toolkit) runs eval.py to verify the VOT2019 Benchmark
 
-### warning 2022.3.16
-1.LaSOText.json中视频序列和注释长度不对应问题：实验发现，在paddle序列中出现视频长度和注释数目(官方提供的数据集和注释)和LaSOT官方提供的工具箱中，与其工具箱所提供的其它跟踪器的结果所对应的视频长度不一致，其中包括数据集的视频序列长度和注释少于跟踪器结果的长度，也出现多于踪器结果的情况。已知这是LaSOT官方的问题，因此慎用LaSOText.json文件做测试，等待LaSOT官方修复，这里也将及时对LaSOText.json文件做出更新。
 
 ### Update 2022.3.17
 1.暂时修正paddle-1视频序列长度（同LaSOT工具箱中的一致）
@@ -198,15 +194,8 @@ python bin/eval.py \
 
 2.修复原有VOT系列各个属性的雷达图绘制中不能绘制下滑线的问题
 
-### Update 2022.4.02
-1.新增LaSOText2.json，其中LaSOText2.json中paddle-1中的数据长度和官方数据集所提供的长度保持一致。如果想利用官方提供的跟踪器结果文件绘制曲线，建议使用LaSOText.json。LaSOText2.json则是为了方便用户和近期的相关论文中提供的结果进行比较。
-
 ### Update 2022.06.09
-1.根据OSTrack Tracker作者所提供的GOT10k结果所生成的GOT10k测试集的json文件“GOT-10k-test.json”，方便用户进行搜参操作。(搜参或测试时，记得将GOT-10k-test.json重命名为GOT-10k.json)。
-
-2.新增“creat_got_json.py”文件，用于生成GOT-10k.json，其中raw results可从上got官网下载(http://got-10k.aitestunion.com/leaderboard) 。
-
-3.新增"LaSOT.json/LaSOText.json" 文件生成方式
+1.新增“creat_got_json.py”文件，用于生成GOT-10k.json，其中raw results可从上got官网下载(http://got-10k.aitestunion.com/leaderboard) 。
 
 感谢某位不知名的大佬的支持。
 
@@ -214,6 +203,5 @@ python bin/eval.py \
 新增test_parallel.py脚本，该脚本将模型并行推理的最小线程单位设置为Video，即在一个数据集上的测试可以以多视频序列并行的方式来减少模型在数据集上总的测试的时间。
 具体使用方法见文件内注释。
 
-### Update 2022.09.24
-1.更新GOT-10k-test.json，结果来自MixViT
-
+### Update 2022.11.20
+1.更新creat_got_json.py文件，主要针对Linux下的搜参问题，更新后的文件生成的json文件可同时适用于windows和Linux
