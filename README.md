@@ -216,3 +216,5 @@ python bin/eval.py \
 ### Update 2022.09.24
 1.更新GOT-10k-test.json，结果来自MixViT
 
+### Update 2022.11.20
+1.更新GOT-10k-test.json，结果来自GOT-10k榜首
