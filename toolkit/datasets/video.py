@@ -66,10 +66,10 @@ class Video(object):
                     print(name, len(pred_traj), len(self.gt_traj), self.name)
                 if store:
                     self.pred_trajs[name] = pred_traj
-                else:
-                    return pred_traj
+                return pred_traj
             else:
                 print(traj_file)
+                print(traj_file1)
         self.tracker_names = list(self.pred_trajs.keys())
 
     def load_img(self):
