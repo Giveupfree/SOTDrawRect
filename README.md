@@ -220,3 +220,6 @@ python bin/eval.py \
 1.更新GOT-10k-test.json，结果来自GOT-10k榜首
 
 2.更新creat_got_json.py文件，主要针对Linux下的搜参问题，更新后的文件生成的json文件可同时适用于windows和Linux
+
+### Update 2022.11.21
+1.修复2022.11.20号的一个代码bug
