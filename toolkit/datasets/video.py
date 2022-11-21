@@ -70,6 +70,7 @@ class Video(object):
                     return pred_traj
             else:
                 print(traj_file)
+                print(traj_file1)
         self.tracker_names = list(self.pred_trajs.keys())
 
     def load_img(self):
