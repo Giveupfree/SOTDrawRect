@@ -62,6 +62,7 @@ Download json files used in our toolkit [baidu pan](https://pan.baidu.com/s/1js0
 ### Draw rectangular boxes
 ```bash
 cd /path/to/SOTDrawRect
+export PYTHONPATH=./:$PYTHONPATH
 python draw_rect.py \                     
 	--dataset_dir /path/to/dataset/root \		# dataset path
 	--dataset VOT2018 \				# dataset name(VOT2019, VOT2018, VOT2016, OTB100, GOT10k, LaSOT, UAV123)
@@ -74,6 +75,7 @@ python draw_rect.py \
 ### Draw bounding boxes for a video sequence
 ```bash
 cd /path/to/SOTDrawRect
+export PYTHONPATH=./:$PYTHONPATH
 python draw_rect.py \    
     	-- video videoname \                 
 	--dataset_dir /path/to/dataset/root \		# dataset path
@@ -87,6 +89,7 @@ python draw_rect.py \
 ### Evaluation on VOT2018(VOT2016, VOT2019)
 ```bash
 cd /path/to/pysot-toolkit
+export PYTHONPATH=./:$PYTHONPATH
 python bin/eval.py \
 	--dataset_dir /path/to/dataset/root \		# dataset path
 	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, VOT2019)
@@ -110,6 +113,7 @@ converted *.txt tracking results will be released soon
 
 ```bash
 cd /path/to/pysot-toolkit
+export PYTHONPATH=./:$PYTHONPATH
 python bin/eval.py \
 	--dataset_dir /path/to/dataset/root \		# dataset path
 	--dataset OTB100 \				# dataset name(OTB100, UAV123, NFS, LaSOT, LaSOText)
@@ -152,6 +156,7 @@ python bin/eval.py \
 ### Evaluation on VOT2018-LT
 ```bash
 cd /path/to/pysot-toolkit
+export PYTHONPATH=./:$PYTHONPATH
 python bin/eval.py \
 	--dataset_dir /path/to/dataset/root \		# dataset path
 	--dataset VOT2018-LT \				# dataset name
