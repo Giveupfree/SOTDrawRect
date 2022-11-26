@@ -8,9 +8,9 @@ sys.path.append("./")
 from glob import glob
 from tqdm import tqdm
 from multiprocessing import Pool
-from pysot.datasets import OTBDataset, UAVDataset, LaSOTDataset, VOTDataset, NFSDataset, VOTLTDataset
-from pysot.evaluation import OPEBenchmark, AccuracyRobustnessBenchmark, EAOBenchmark, F1Benchmark
-from pysot.visualization import draw_success_precision, draw_eao, draw_f1
+from toolkit.datasets import OTBDataset, UAVDataset, LaSOTDataset, VOTDataset, NFSDataset, VOTLTDataset
+from toolkit.evaluation import OPEBenchmark, AccuracyRobustnessBenchmark, EAOBenchmark, F1Benchmark
+from toolkit.visualization import draw_success_precision, draw_eao, draw_f1
 from matplotlib import rc
 # rc("text", usetex=False)
 import matplotlib.pyplot as plt
