@@ -213,3 +213,6 @@ python bin/eval.py \
 
 ### Update 2022.11.21
 1.修复2022.11.20号的一个代码bug
+
+### Update 2022.11.26
+1.修复bin/eval.py中的一个bug
