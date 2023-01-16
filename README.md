@@ -216,6 +216,3 @@ python bin/eval.py \
 
 ### Update 2022.11.26
 1.修复bin/eval.py中的一个bug
-
-### Update 2023.01.16
-1.更新GOT-10k-test.json，结果来自GOT-10k榜首
